@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DocuBot Pro</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+<h1><i class="fas fa-robot"></i> DocuBot Pro – IA com RAG</h1>
+
+<form method="POST" enctype="multipart/form-data">
+  <label><i class="fas fa-upload"></i> <strong>Enviar documento:</strong></label><br>
+  <input type="file" name="file">
+  <button type="submit"><i class="fas fa-file-import"></i> Upload</button>
+</form>
+
+<hr>
+
+<form method="POST">
+  <label for="pergunta"><i class="fas fa-question-circle"></i> <strong>Digite sua pergunta:</strong></label><br>
+  <textarea name="pergunta" placeholder="Ex: O que é o SUAS?" required>{{ pergunta or '' }}</textarea><br>
+  <button type="submit"><i class="fas fa-paper-plane"></i> Perguntar</button>
+</form>
+
+{% if resposta %}
+  <div class="resposta">
+    <strong><i class="fas fa-comment-dots"></i> Resposta:</strong>
+    <p>{{ resposta }}</p>
+  </div>
+{% endif %}
+
+</body>
+</html>

@@ -1,0 +1,21 @@
+# Ambiente virtual
+.venv/
+
+# Configurações sensíveis
+.env
+
+# Dados e cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.log
+*.sqlite3
+
+# Diretórios locais
+faiss_index/
+n8n_data/
+
+# VSCode e outros editores
+.vscode/
+.idea/
