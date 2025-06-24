@@ -100,6 +100,7 @@ packaging==24.2
 pandas==2.3.0
 pdf2image==1.17.0
 pdfminer.six==20250506
+pdfplumber
 pi_heif==0.22.0
 pikepdf==9.9.0
 pillow==11.2.1
